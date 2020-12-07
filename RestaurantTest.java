@@ -78,4 +78,13 @@ class RestaurantTest {
         selectedItem.add(item1);
         selectedItem.add(item2);
     }
+
+    @Test
+    public void total_cost_of_added_items () {
+
+        List<Item> menu = restaurant.getMenu();
+        int totalPrice = 388;
+        int realTotalPrice = restaurant.displayTotalCost(menu);
+        assertEquals(totalPrice,realTotalPrice);
+    }
 }
